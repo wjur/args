@@ -1,0 +1,16 @@
+plugins {
+    id 'groovy'
+}
+
+group 'io.github.wjur.args'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.5.2'
+    testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
+    testCompile 'junit:junit:4.12'
+}
