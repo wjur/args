@@ -19,10 +19,10 @@ class Args  {
 
     static Args args(Map defaults, Map overrides = [:]) {
         if (defaults == null) {
-            throw new NullPointerException("Args 'defaults' cannot be null")
+            throw new IllegalArgumentException("Args 'defaults' cannot be null")
         }
         if (overrides == null) {
-            throw new NullPointerException("Args 'overrides' cannot be null")
+            throw new IllegalArgumentException("Args 'overrides' cannot be null")
         }
 
         def unknownKeys = overrides.keySet() - defaults.keySet()

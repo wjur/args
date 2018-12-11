@@ -53,4 +53,20 @@ class ArgsSpec extends Specification {
         def exception = thrown(UnknownKeysException)
         exception.unknownKeys as Set == ['non-existing'] as Set
     }
+
+    def "should disallow null defaults"() {
+        when:
+        Args.args(null, [:])
+
+        then:
+        thrown(IllegalArgumentException)
+    }
+
+    def "should disallow null overrides"() {
+        when:
+        Args.args([:], null)
+
+        then:
+        thrown(IllegalArgumentException)
+    }
 }
