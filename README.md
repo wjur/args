@@ -1,0 +1,1 @@
+[![Coverage Status](https://coveralls.io/repos/github/wjur/args/badge.svg?branch=travis-ci)](https://coveralls.io/github/wjur/args?branch=travis-ci)

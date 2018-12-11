@@ -5,3 +5,5 @@ jdk:
   - oraclejdk11
   - openjdk10
   - openjdk11
+
+after_success: ./gradlew jacocoTestReport coveralls
