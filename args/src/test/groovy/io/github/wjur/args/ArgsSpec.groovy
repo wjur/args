@@ -7,13 +7,21 @@ class ArgsSpec extends Specification {
     def "should contain default values"() {
         when:
         def args = Args.args([
-                foo      : 'bar',
-                someOther: null
+                foo      : 'bar'
         ])
 
         then:
         args.foo == 'bar'
-        args.someOther == null
+    }
+
+    def "should support null default values"() {
+        when:
+        def args = Args.args([
+                foo      : null,
+        ])
+
+        then:
+        args.foo == null
     }
 
     def "should throw when property was not defined"() {
