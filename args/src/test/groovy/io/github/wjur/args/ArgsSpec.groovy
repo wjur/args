@@ -29,7 +29,8 @@ class ArgsSpec extends Specification {
         Args.args([:]).notDefined
 
         then:
-        thrown(UnknownKeyException)
+        def exception = thrown(UnknownKeyException)
+        exception.unknownKey == 'notDefined'
     }
 
     def "should allow override default value"() {
@@ -49,6 +50,7 @@ class ArgsSpec extends Specification {
         Args.args(['foo': 'bar'], ['non-existing': 'some-value'])
 
         then:
-        thrown(UnknownKeysException)
+        def exception = thrown(UnknownKeysException)
+        exception.unknownKeys as Set == ['non-existing'] as Set
     }
 }
