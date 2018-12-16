@@ -2,10 +2,11 @@ plugins {
     id 'groovy'
     id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.8.2'
+    id 'pl.allegro.tech.build.axion-release' version '1.10.0'
 }
 
-group 'io.github.wjur.args'
-version '1.0-SNAPSHOT'
+group 'io.github.wjur'
+version = scmVersion.version
 
 repositories {
     mavenCentral()

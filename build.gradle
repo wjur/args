@@ -2,8 +2,7 @@ plugins {
     id 'groovy'
 }
 
-group 'io.github.wjur.args'
-version '1.0-SNAPSHOT'
+group 'io.github.wjur'
 
 repositories {
     mavenCentral()
