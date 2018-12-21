@@ -1,8 +1,23 @@
-plugins {
-    id 'groovy'
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
+    }
 }
 
-group 'io.github.wjur'
+plugins {
+    id 'groovy'
+    id 'pl.allegro.tech.build.axion-release' version '1.10.0'
+}
+
+
+
+allprojects {
+    version = scmVersion.version
+    group = 'io.github.wjur'
+}
 
 repositories {
     mavenCentral()

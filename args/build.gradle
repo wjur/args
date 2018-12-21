@@ -2,11 +2,9 @@ plugins {
     id 'groovy'
     id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.8.2'
-    id 'pl.allegro.tech.build.axion-release' version '1.10.0'
 }
 
-group 'io.github.wjur'
-version = scmVersion.version
+apply plugin: 'com.bmuschko.nexus'
 
 repositories {
     mavenCentral()
@@ -22,4 +20,39 @@ jacocoTestReport {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.5.3'
     testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
+}
+
+modifyPom {
+    project {
+        name 'args'
+        description 'Create safer map-based test builders'
+        url 'https://github.com/wjur/args'
+        inceptionYear '2018'
+
+        scm {
+            url 'https://github.com/wjur/args'
+            connection 'scm:git@github.com:wjur/args.git'
+            developerConnection 'scm:git@github.com:wjur/args.git'
+        }
+
+        licenses {
+            license {
+                name 'The MIT License'
+                url 'https://raw.githubusercontent.com/wjur/args/master/LICENSE'
+            }
+        }
+
+        developers {
+            developer {
+                id 'wjur'
+                name 'Wojciech Jurczyk'
+            }
+        }
+    }
+}
+
+nexus {
+    sign = true
+    repositoryUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+    snapshotRepositoryUrl = 'https://oss.sonatype.org/content/repositories/snapshots/'
 }

@@ -3,8 +3,6 @@ plugins {
     id 'java'
 }
 
-group 'io.github.wjur'
-
 sourceCompatibility = 1.8
 
 repositories {
