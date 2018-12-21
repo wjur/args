@@ -1,2 +1,3 @@
 [![Build Status](https://travis-ci.com/wjur/args.svg?branch=master)](https://travis-ci.com/wjur/args)
-[![Coverage Status](https://coveralls.io/repos/github/wjur/args/badge.svg?branch=travis-ci)](https://coveralls.io/github/wjur/args?branch=travis-ci)
+[![Coverage Status](https://coveralls.io/repos/github/wjur/args/badge.svg?branch=master)](https://coveralls.io/github/wjur/args?branch=master)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.wjur/args/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.wjur/args)
