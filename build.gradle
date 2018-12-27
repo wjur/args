@@ -12,11 +12,11 @@ plugins {
     id 'pl.allegro.tech.build.axion-release' version '1.10.0'
 }
 
-
-
 allprojects {
     version = scmVersion.version
     group = 'io.github.wjur'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
