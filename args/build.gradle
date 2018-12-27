@@ -22,6 +22,9 @@ dependencies {
     testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
 }
 
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
 modifyPom {
     project {
         name 'args'
